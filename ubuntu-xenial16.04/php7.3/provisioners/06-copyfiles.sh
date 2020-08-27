@@ -9,6 +9,6 @@ echo "*/"
 # As a workaround, we're going to use the file provisioner to copy the said files to
 # a non-elevated directory, then use the inline shell script to move them to the
 # appropriate directory
-cp /mnt/resources/php/php.ini /etc/php/7.1/apache2/php.ini
+cp /mnt/resources/php/php.ini /etc/php/7.3/apache2/php.ini
 cp /mnt/resources/apache2/wildcards.conf /etc/apache2/sites-available/wildcards.conf
 echo "Done!"
