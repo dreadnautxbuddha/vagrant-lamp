@@ -6,7 +6,7 @@ A very basic implementation of a LAMP (Linux, Apache, MySQL, PHP) stack using Va
 ```sh
 $ cd ubuntu-xenial16.04
 <!--php versions are organized by directory, just choose one.-->
-$ cd <php5.6|php7.1>
+$ cd php5.6
 $ vagrant up
 ```
 
