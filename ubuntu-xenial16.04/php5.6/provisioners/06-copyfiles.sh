@@ -11,4 +11,5 @@ echo "*/"
 # appropriate directory
 cp /mnt/resources/php/php.ini /etc/php/5.6/apache2/php.ini
 cp /mnt/resources/apache2/wildcards.conf /etc/apache2/sites-available/wildcards.conf
+cp /mnt/resources/mysql56/my.cnf /etc/mysql/my.cnf
 echo "Done!"
