@@ -1,7 +1,7 @@
 # !/usr/bin/env bash
 echo "/*"
 echo "|---------------------------------------------"
-echo "| [Installing] PHP 5.6 and other components"
+echo "| [Installing] PHP 7.1 and other components"
 echo "|---------------------------------------------"
 echo "*/"
 apt-get install -y python-software-properties
