@@ -83,6 +83,7 @@ Vagrant.configure("2") do |config|
     catherine.vm.provision "shell", path: "../../common-provisioners/03-apache2.sh"
     catherine.vm.provision "shell", path: "../../common-provisioners/04-node.sh"
     catherine.vm.provision "shell", path: "../../common-provisioners/05-composer.sh"
-    catherine.vm.provision "shell", path: "provisioners/last-words.sh"
+    catherine.vm.provision "shell", path: "provisioners/06-copyfiles.sh"
+    catherine.vm.provision "shell", path: "../../common-provisioners/06-apachewildcards.sh"
   end
 end
