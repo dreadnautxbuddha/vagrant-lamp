@@ -1,4 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
 Vagrant.configure("2") do | config |
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
     # Disable automatic box update checking. If you disable this, then
     # boxes will only be checked for updates when the user runs
     # `vagrant box outdated`. This is not recommended.
@@ -47,17 +60,17 @@ Vagrant.configure("2") do | config |
         #   apt-get update
         #   apt-get install -y apache2
         # SHELL
-        #defaults.vm.provision "shell", path: "../../common/provisioners/00-utils.sh"
-        #defaults.vm.provision "shell", path: "provisioners/php56.sh"
-        #defaults.vm.provision "shell", path: "provisioners/mysql56.sh"
-        #defaults.vm.provision "shell", path: "provisioners/elasticsearch175.sh"
-        #defaults.vm.provision "shell", path: "../../common/provisioners/01-misc.sh"
-        #defaults.vm.provision "shell", path: "../../common/provisioners/02-vcs.sh"
-        #defaults.vm.provision "shell", path: "../../common/provisioners/03-apache2.sh"
-        #defaults.vm.provision "shell", path: "../../common/provisioners/04-node.sh"
-        #defaults.vm.provision "shell", path: "../../common/provisioners/05-composer.sh"
-        #defaults.vm.provision "shell", path: "provisioners/06-copyfiles.sh"
-        #defaults.vm.provision "shell", path: "../../common/provisioners/06-apachewildcards.sh"
+        defaults.vm.provision "shell", path: "../../common/provisioners/00-utils.sh"
+        defaults.vm.provision "shell", path: "provisioners/php56.sh"
+        defaults.vm.provision "shell", path: "provisioners/mysql56.sh"
+        defaults.vm.provision "shell", path: "provisioners/elasticsearch175.sh"
+        defaults.vm.provision "shell", path: "../../common/provisioners/01-misc.sh"
+        defaults.vm.provision "shell", path: "../../common/provisioners/02-vcs.sh"
+        defaults.vm.provision "shell", path: "../../common/provisioners/03-apache2.sh"
+        defaults.vm.provision "shell", path: "../../common/provisioners/04-node.sh"
+        defaults.vm.provision "shell", path: "../../common/provisioners/05-composer.sh"
+        defaults.vm.provision "shell", path: "provisioners/06-copyfiles.sh"
+        defaults.vm.provision "shell", path: "../../common/provisioners/06-apachewildcards.sh"
     end
 end
 
