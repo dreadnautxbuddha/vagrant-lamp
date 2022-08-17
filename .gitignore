@@ -17,3 +17,5 @@
 *.log
 
 .DS_Store
+
+Vagrantfile.dev
