@@ -17,8 +17,7 @@ Vagrant.configure("2") do | config |
     # `vagrant box outdated`. This is not recommended.
     # config.vm.box_check_update = false
     config.vm.box = "ubuntu/xenial64"
-    config.vm.boot_timeout = 3600
-    config.vm.define "UX16.04-Boxer" do | defaults |
+    config.vm.define "UX16.04-Catherine" do | defaults |
         # Create a forwarded port mapping which allows access to a specific port
         # within the machine from a port on the host machine. In the example below,
         # accessing "localhost:8080" will access port 80 on the guest machine.
@@ -33,7 +32,7 @@ Vagrant.configure("2") do | config |
         # the path on the host to the actual folder. The second argument is
         # the path on the guest to mount the folder. And the optional third
         # argument is a set of non-required options.
-        defaults.vm.synced_folder "../../common/resources", "/mnt/resources",
+        defaults.vm.synced_folder "../../../common/resources", "/mnt/resources",
             id: "resources",
             group: 'www-data',
             owner: 'www-data',
@@ -61,17 +60,17 @@ Vagrant.configure("2") do | config |
         #   apt-get update
         #   apt-get install -y apache2
         # SHELL
-        defaults.vm.provision "shell", path: "../../common/provisioners/00-utils.sh"
-        defaults.vm.provision "shell", path: "provisioners/php74.sh"
-        defaults.vm.provision "shell", path: "provisioners/mysql57.sh"
-        defaults.vm.provision "shell", path: "provisioners/elasticsearch68.sh"
-        defaults.vm.provision "shell", path: "../../common/provisioners/01-misc.sh"
-        defaults.vm.provision "shell", path: "../../common/provisioners/02-vcs.sh"
-        defaults.vm.provision "shell", path: "../../common/provisioners/03-apache2.sh"
-        defaults.vm.provision "shell", path: "../../common/provisioners/04-node.sh"
-        defaults.vm.provision "shell", path: "../../common/provisioners/05-composer.sh"
+        defaults.vm.provision "shell", path: "../../../common/provisioners/00-utils.sh"
+        defaults.vm.provision "shell", path: "provisioners/php56.sh"
+        defaults.vm.provision "shell", path: "provisioners/mysql56.sh"
+        defaults.vm.provision "shell", path: "provisioners/elasticsearch175.sh"
+        defaults.vm.provision "shell", path: "../../../common/provisioners/01-misc.sh"
+        defaults.vm.provision "shell", path: "../../../common/provisioners/02-vcs.sh"
+        defaults.vm.provision "shell", path: "../../../common/provisioners/03-apache2.sh"
+        defaults.vm.provision "shell", path: "../../../common/provisioners/04-node.sh"
+        defaults.vm.provision "shell", path: "../../../common/provisioners/05-composer.sh"
         defaults.vm.provision "shell", path: "provisioners/06-copyfiles.sh"
-        defaults.vm.provision "shell", path: "../../common/provisioners/06-apachewildcards.sh"
+        defaults.vm.provision "shell", path: "../../../common/provisioners/06-apachewildcards.sh"
     end
 end
 
